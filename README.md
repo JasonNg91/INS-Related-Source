@@ -1,5 +1,5 @@
 # INS-Related-Source
-Inertial navigation related source
+A collection of awesome inertial navigation related source, including AI-based-INS, classic-INS, AHRS, new filter algorithm for INS, magnetic-field navigation, human activity recognization, dataset and so on.
 
 # AI-based inertial navigation source
 ## 1-1. RIDI: Robust IMU Double Integration
