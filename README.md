@@ -14,7 +14,7 @@ This paper proposes a novel data-driven approach for inertial navigation, which 
 
 This paper sets a new foundation for data-driven inertial navigation research, where the task is the estimation of positions and orientations of a moving subject from a sequence of IMU sensor measurements. More concretely, the paper presents 1) a new benchmark containing more than 40 hours of IMU sensor data from 100 human subjects with ground-truth 3D trajectories under natural human motions; 2) novel neural inertial navigation architectures, making significant improvements for challenging motion cases; and 3) qualitative and quantitative evaluations of the competing methods over three inertial navigation benchmarks. We will share the code and data to promote further research.
 
-# 2. IONet: Learning to Cure the Curse of Drift in Inertial Odometry
+## 2. IONet: Learning to Cure the Curse of Drift in Inertial Odometry
 - paper: https://paperswithcode.com/paper/ionet-learning-to-cure-the-curse-of-drift-in
 
 Inertial sensors play a pivotal role in indoor localization, which in turn lays the foundation for pervasive personal applications. However, low-cost inertial sensors, as commonly found in smartphones, are plagued by bias and noise, which leads to unbounded growth in error when accelerations are double integrated to obtain displacement. Small errors in state estimation propagate to make odometry virtually unusable in a matter of seconds. We propose to break the cycle of continuous integration, and instead segment inertial data into independent windows. The challenge becomes estimating the latent states of each window, such as velocity and orientation, as these are not directly observable from sensor data. We demonstrate how to formulate this as an optimization problem, and show how deep recurrent neural networks can yield highly accurate trajectories, outperforming state-of-the-art shallow techniques, on a wide range of tests and attachments. In particular, we demonstrate that IONet can generalize to estimate odometry for non-periodic motion, such as a shopping trolley or baby-stroller, an extremely challenging task for existing techniques.
@@ -86,13 +86,13 @@ This paper presents an end-to-end learning framework for performing 6-DOF odomet
 
 Modern inertial measurements units (IMUs) are small, cheap, energy efficient, and widely employed in smart devices and mobile robots. Exploiting inertial data for accurate and reliable pedestrian navigation supports is a key component for emerging Internet-of-Things applications and services. Recently, there has been a growing interest in applying deep neural networks (DNNs) to motion sensing and location estimation. However, the lack of sufficient labelled data for training and evaluating architecture benchmarks has limited the adoption of DNNs in IMU-based tasks. In this paper, we present and release the Oxford Inertial Odometry Dataset (OxIOD), a first-of-its-kind public dataset for deep learning based inertial navigation research, with fine-grained ground-truth on all sequences. Furthermore, to enable more efficient inference at the edge, we propose a novel lightweight framework to learn and reconstruct pedestrian trajectories from raw IMU data. Extensive experiments show the effectiveness of our dataset and methods in achieving accurate data-driven pedestrian inertial navigation on resource-constrained devices.
 
-# 12. IMUNet: Efficient Regression Architecture for IMU Navigation and Positioning
+## 12. IMUNet: Efficient Regression Architecture for IMU Navigation and Positioning
 - paper: https://arxiv.org/abs/2208.00068
 - github: https://github.com/BehnamZeinali/IMUNet?tab=readme-ov-file
 
 Data-driven based method for navigation and positioning has absorbed attention in recent years and it outperforms all its competitor methods in terms of accuracy and efficiency. This paper introduces a new architecture called IMUNet which is accurate and efficient for position estimation on edge device implementation receiving a sequence of raw IMU measurements. The architecture has been compared with one dimension version of the state-of-the-art CNN networks that have been introduced recently for edge device implementation in terms of accuracy and efficiency. Moreover, a new method for collecting a dataset using IMU sensors on cell phones and Google ARCore API has been proposed and a publicly available dataset has been recorded. A comprehensive evaluation using four different datasets as well as the proposed dataset and real device implementation has been done to prove the performance of the architecture. All the code in both Pytorch and Tensorflow framework as well as the Android application code have been shared to improve further research.
 
-# 13. TLIO: Tight Learned Inertial Odometry
+## 13. TLIO: Tight Learned Inertial Odometry
 - paper：https://arxiv.org/abs/2007.01867
 - github: https://cathias.github.io/TLIO/
 
