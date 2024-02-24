@@ -2,6 +2,12 @@
 A collection of awesome inertial navigation related source, including AI-based-INS, classic-INS, AHRS, new filter algorithm for INS, magnetic-field navigation, human activity recognization, dataset and so on.
 
 # AI-based inertial navigation source
+
+## 1-0：Deep Learning for Inertial Positioning: A Survey
+- paper: https://arxiv.org/abs/2303.03757
+
+Inertial sensors are widely utilized in smartphones, drones, robots, and IoT devices, playing a crucial role in enabling ubiquitous and reliable localization. Inertial sensor-based positioning is essential in various applications, including personal navigation, location-based security, and human-device interaction. However, low-cost MEMS inertial sensors' measurements are inevitably corrupted by various error sources, leading to unbounded drifts when integrated doubly in traditional inertial navigation algorithms, subjecting inertial positioning to the problem of error drifts. In recent years, with the rapid increase in sensor data and computational power, deep learning techniques have been developed, sparking significant research into addressing the problem of inertial positioning. Relevant literature in this field spans across mobile computing, robotics, and machine learning. In this article, we provide a comprehensive review of deep learning-based inertial positioning and its applications in tracking pedestrians, drones, vehicles, and robots. We connect efforts from different fields and discuss how deep learning can be applied to address issues such as sensor calibration, positioning error drift reduction, and multi-sensor fusion. This article aims to attract readers from various backgrounds, including researchers and practitioners interested in the potential of deep learning-based techniques to solve inertial positioning problems. Our review demonstrates the exciting possibilities that deep learning brings to the table and provides a roadmap for future research in this field.
+
 ## 1-1. RIDI: Robust IMU Double Integration
 - paper: https://paperswithcode.com/paper/ridi-robust-imu-double-integration
 - github: https://github.com/higerra/ridi_imu
