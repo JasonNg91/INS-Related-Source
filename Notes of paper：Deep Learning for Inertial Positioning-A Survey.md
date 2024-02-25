@@ -114,76 +114,6 @@ dilation ConvNet to compensate the gyro noise.
 
 ### Survey2: inertial positioning
 
-otes of paper：Deep Learning for Inertial Positioning: A Survey  
-
-- paper link: https://arxiv.org/abs/2303.03757
-- Acknowledgment: Thanks to the paper author (Changhao Chen)'s awesome work!
-
-- `综述范围：`narrow the survey coverage into deep learning based inertial positioning, so that offer deeper insights and analysis over the fast-evolving developments of this area in recent five years (2018-2022).
-- `涵盖研究方向：`provide a comprehensive review on deep learning based inertial positioning approaches, from measurement calibration, inertial positioning algorithms to sensor fusion.
-
-### Survey1: measurement calibration
-
-![alt text](image.png)
-![alt text](image-1.png)
-`Deeplearning IMU校正的三种思路, 输入均为raw IMU数据：`
-
-- (1) 模型输出：训练后的IMU数据；
-- (2) 模型输出：训练后的姿态数据；
-- (3) 模型输出：训练后的最优的典型校正算法的模型参数；
-
-`风险/问题：`
-- a.模型训练学习跟传感器、车辆会相关，泛化能力可能有问题？
-- b.没有深入分析消除了哪部分噪声；
-
---- 
-深度学习IMU误差
-
-#### 1. 2019-A Survey of the Research Status of Pedestrian Dead Reckoning Systems Based on Inertial Sensors
-
-- `主要贡献：采用1层ANN网络估计陀螺漂移`proposes to use 1-layer artificial neural network (ANN) to model the distribution of gyro drifts, and successfully approximate gyro drifts with such ’shallow’ network.
-- `优势：`Compared with Kalman filtering (KF) based calibration method, its advantage is that it does not require to set hyber-parameters before use, such as the sensor noise matrix in KF.
-- `不足：`N/A
-  
-#### 2. 2018-Improving inertial sensor by reducing errors using deep learning methodology
-
-- `主要贡献：采用CNN网络估计低精度IMU的误差`presents a CNN (ConvNet) frmework to remove the error noises above inertial measurements.
-- `优势：`deep learning can remove part of sensor error and improve test accuracy.
-- `不足：(1)未在真实导航场景验证；（2）训练需要高精度IMU做真值参考；`this work is not validated in a real navigation setup, and thus can not show how the learning based sensor calibration reduces error drifts of inertial navigation.
-
-
-#### 3. 2019-Orinet: Robust 3-d orientation estimation with a single particular imu.
-
-- `主要贡献：`OriNet inputs 3-dimensional gyroscope signals into a long-short-termmemory (LSTM) network to obtain calibrated gyroscope signals, that are integrated with the orientation at the previous timestep to generate orientation estimates at current current timestep. 
-- `优势：直接估计更精准的姿态，参考真值为姿态。`A loss function between orientation estimates and
-real orientation is defined and minimized for model training.
-- `不足：`N/A
-
-#### 4. 2020-Denoising imu gyroscopes with deep learning for open-loop attitude estimation
-
-- `主要贡献：`learn gyro corrections to calibrate gyroscope
-- `优势：`learns to calibrate gyroscope but using convolutional neural networks (ConvNet) instead, reporting good attitude estimation accuracy as well.
-- `不足：`N/A
-
-#### 5. 2022-Calib-net: Calibrating the low-cost imu via deep convolutional neural network.
-
-- `主要贡献：`To extract effective spatiotemporal features from inertial data, Calib-Net is based on
-dilation ConvNet to compensate the gyro noise.
-- `优势：`this model is able to reduce orientation error largely, compared with raw IMU integration. When this learned inertial calibration model is incorporated into a visual-inertial odometry (VIO), it further improves localization performance, and outperforms representative VIO
-- `不足：`N/A
-
-#### 6. 2022-A mems imu gyroscope calibration method based on deep learning.
-
-#### 7. 2020-Learning to compensate for the drift and error of gyroscope in vehicle localization.
-
-#### 8. 2019-Learning to calibrate: Reinforcement learning for guided calibration of visual–inertial rigs.
-
-- `主要贡献：`models inertial sensor calibration as a Markov Decision Process, and propose to learn the optimal calibration parameters via deep reinforcement learning
-- `优势：学习IMU典型校正算法的模型参数，然后用于传统校正算法`evaluated their method in successfully calibrating inertial sensor for a VIO system.
-- `不足：`N/A
-
-### Survey2: inertial positioning
-
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 `Deeplearning 惯性递推, 输入均为raw IMU数据：`
@@ -396,7 +326,6 @@ infer useful terms.
 - `优势：`It has been evaluated on a drone dataset, and outperforms TLIO and other learning methods.
 - `不足：`N/A
 
-
 ### Survey3: sensor fusion
 
 ![alt text](image-4.png)
@@ -502,4 +431,3 @@ upstairs, laying down)
 
 - presents a learning framework to exploit both features automatically
 extracted by DNN and hand-crafted features that contributes to an accurate and real-time human activity recognition on low-end devices.
-
